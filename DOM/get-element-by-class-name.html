@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetElementByClassName</title>
+</head>
+<body>
+
+    <p class="destaque">Texto 1</p>
+    <p class="destaque">Texto 2</p>
+
+    <script>
+        const textos = document.getElementsByClassName("destaque");
+        textos[0].style.color = "red"; //alterando somente o 1
+        textos[1].textContent = "texto novo"
+        textos[1].style.color = "brown"
+    </script>
+    
+</body>
+</html>
