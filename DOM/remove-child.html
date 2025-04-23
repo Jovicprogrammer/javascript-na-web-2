@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        removeChild
+    </title>
+</head>
+<body>
+
+    <ul id="lista">
+        <li class="remover">Item que será removido</li>
+        <li class="remover">Item que será removido</li>
+        <li class="remover">Item que será removido</li>
+    </ul>
+
+    <p>o único paragrafo</p>
+
+    <script>
+        const lista = document.getElementById('lista')
+        const itens = document.querySelectorAll('li')
+        
+        itens.forEach((item) => {lista.removeChild(item)})
+
+    </script>
+</body>
+</html>
