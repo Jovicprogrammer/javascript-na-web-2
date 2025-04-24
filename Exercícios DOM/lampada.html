@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada</title>
+</head>
+<body>
+
+    <div id="container">
+        <h1><strong>Desafio: clique para acender/apagar a lâmpada</strong></h1>
+        <img style="height: 400px;" id="imagem" src="./imgs_exercicios/apagada.png" alt=""><br>
+        <img style="height: 100px;" id="btn" src="./imgs_exercicios/desligado.png" alt="">
+    </div>
+
+    <script>
+        const img = document.getElementById('imagem')
+        const container = document.getElementById('container')
+        const title = document.querySelector('h1')
+        const body = document.querySelector('body')
+        
+        document.getElementById('btn').addEventListener('click', () => {
+            if (img.getAttribute('src') == './imgs_exercicios/apagada.png') {
+                img.setAttribute('src', './imgs_exercicios/acesa.png');
+                btn.setAttribute('src', './imgs_exercicios/ligado.png')
+                container.style.backgroundColor = '#fcff9c'
+                title.style.color = 'black'
+                body.style.backgroundColor = '#fcff9c'
+            } else {
+                img.setAttribute('src', './imgs_exercicios/apagada.png');
+                btn.setAttribute('src', './imgs_exercicios/desligado.png')
+                container.style.backgroundColor = 'black'
+                title.style.color = 'white'
+                body.style.backgroundColor = 'black'
+            }
+        })
+    </script>
+    
+</body>
+</html>
