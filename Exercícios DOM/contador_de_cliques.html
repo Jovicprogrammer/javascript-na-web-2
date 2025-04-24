@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-color: navajowhite;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        #contador {
+            font-size: 60px;
+            margin: auto;
+        }
+
+        #btn {
+            margin-top: 10px;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+
+    </style>
+    <title>Contador de Cliques</title>
+</head>
+<body>
+
+    <div>
+        <h1>Contador de Cliques</h1>
+        <h2 id="contador">0</h2>
+        <button id="btn">Clique Aqui!</button>
+    </div>
+
+    <script>
+
+        contador = 0
+        
+        document.getElementById('btn').addEventListener('click', () => {
+            contador++
+            document.getElementById("contador").textContent = contador;
+        })
+
+    </script>
+    
+</body>
+</html>
