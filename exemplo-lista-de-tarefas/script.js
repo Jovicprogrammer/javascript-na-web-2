@@ -2,6 +2,7 @@
 const taskInput = document.getElementById('taskInput')
 const addBtn = document.getElementById('addBtn')
 const textList = document.getElementById('taskList')
+const filterInput = document.getElementById('filterInput')
 
 addBtn.addEventListener('click', () => {
     
@@ -17,6 +18,7 @@ addBtn.addEventListener('click', () => {
     removeBtn.textContent = 'Remover'
     removeBtn.style.marginLeft = '10px'
     removeBtn.style.borderStyle = 'none'
+    
 
     removeBtn.addEventListener('click', () => {
         taskList.removeChild(li)
@@ -29,4 +31,22 @@ addBtn.addEventListener('click', () => {
     taskInput.value = ''
 
 
+})
+
+filterInput.addEventListener('input', () => {
+    const filterText = filterInput.value.toLowerCase()
+    const tasks = taskList.querySelectorAll('li')
+    
+    tasks.forEach((task) => {
+        const taskName = task.firstChild.textContent
+        console.log(taskName)
+        
+        if (taskName.includes(filterText)){
+            task.classList.remove("hidden")
+        } else {
+            task.classList.add('hidden')
+        }
+    })
+    
+    
 })

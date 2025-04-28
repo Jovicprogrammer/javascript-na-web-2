@@ -12,20 +12,44 @@
 
         button {
             border-style: none;
-            padding: 7px;
+            padding: 5px;
             margin-top: 3px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul {
+            list-style-type: none;
         }
     </style>
     <title>Lista de Tarefas</title>
 </head>
 <body>
 
-    <h1>Lista de Tarefas</h1>
+    
 
     <section class="container">
+
+        <h1>Lista de Tarefas</h1>
+
+        <div class="filter-container">
+            <input type="text" name="" id="filterInput" placeholder="filtrar tarefas...">
+        </div>
+
         <div class="input-container">
             <input type="text" id="taskInput" placeholder="Digite sua tarefa" required>
             <button id="addBtn">Adicionar</button>
+
+            
 
             <ul id="taskList">
 
