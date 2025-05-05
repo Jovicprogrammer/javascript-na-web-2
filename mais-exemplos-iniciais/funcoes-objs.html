@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto estudante</title>
+</head>
+<body>
+
+    <script>
+
+        const estudante = {
+            nome: 'Neto Gouveia',
+            idade: 27,
+            cpf: '110.990.444.71',
+            turma: 'JavaScript',
+            bolsista: true, 
+            telefone: ['5588999561655', '558855616999'],
+            media: 7.5,
+            estaAprovado: function(mediaBase) {
+                return this.media >= mediaBase ? true : false
+            }}
+    
+            // alert(estudante.nome)
+            alert(`o estudante estar aprovado é ${estudante.estaAprovado(7)}`)
+
+    </script>
+    
+</body>
+</html>
